@@ -1,0 +1,23 @@
+<html>
+<head>
+<title>Rest Tester</title>
+</head>
+<script type="text/javascript">
+	function setForm(frm) {
+		frm.action = frm.url.value; // set the URL
+		frm.method = frm.method.value; // set the request method
+		frm.submit();
+		return;
+	}
+</script>
+<body>
+	<h1>Request Tester</h1>
+	<form method="GET" action="" onsubmit="return setForm(this)">
+		<b>Method</b> : GET<input type="radio" name="method" value="GET" checked /> : POST<input type="radio" name="method" value="POST" /> 
+		<br />
+		<b>URL</b> <input type="text" name="url" size="50" />
+		<hr />
+		<input type="submit" value="Submit Request" />
+	</form>
+</body>
+</html>
